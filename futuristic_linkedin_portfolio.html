@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alen Joses R | AI/ML Engineer</title>
+  <meta name="description" content="Futuristic portfolio landing page for Alen Joses R, AI/ML Engineer." />
+
+  <!-- LinkedIn Badge Script -->
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+  <style>
+    :root {
+      --bg: #05070d;
+      --panel: rgba(11, 18, 32, 0.72);
+      --panel-strong: rgba(14, 25, 45, 0.88);
+      --text: #ecf7ff;
+      --muted: #99abc2;
+      --cyan: #55e7ff;
+      --blue: #6b7cff;
+      --violet: #b55cff;
+      --green: #50ffb1;
+      --line: rgba(115, 229, 255, 0.22);
+      --shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+      --radius-xl: 32px;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(85, 231, 255, 0.22), transparent 30%),
+        radial-gradient(circle at 82% 8%, rgba(181, 92, 255, 0.18), transparent 29%),
+        radial-gradient(circle at 50% 86%, rgba(80, 255, 177, 0.10), transparent 34%),
+        linear-gradient(135deg, #02030a 0%, #071120 48%, #040711 100%);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(85, 231, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(85, 231, 255, 0.05) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.88), transparent 88%);
+      z-index: -3;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.035), transparent);
+      transform: translateX(-100%);
+      animation: scan 9s linear infinite;
+      z-index: -2;
+    }
+
+    @keyframes scan {
+      0% { transform: translateX(-120%); }
+      55%, 100% { transform: translateX(120%); }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: .16;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.32'/%3E%3C/svg%3E");
+    }
+
+    .cursor-glow {
+      position: fixed;
+      width: 420px;
+      height: 420px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(85, 231, 255, .18), transparent 68%);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      transition: opacity .25s ease;
+    }
+
+    .shell {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 16px;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 16px;
+      margin-top: 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(3, 8, 18, .62);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 50px rgba(0,0,0,.25);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: .4px;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: conic-gradient(from 180deg, var(--cyan), var(--violet), var(--green), var(--cyan));
+      color: #061018;
+      box-shadow: 0 0 28px rgba(85, 231, 255, .45);
+      font-weight: 950;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-links a {
+      padding: 10px 13px;
+      color: var(--muted);
+      font-size: 14px;
+      border-radius: 999px;
+      transition: .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: rgba(85, 231, 255, .1);
+    }
+
+    .nav-cta,
+    .btn-primary,
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(85, 231, 255, .3);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta {
+      padding: 10px 15px;
+      background: linear-gradient(135deg, rgba(85, 231, 255, .18), rgba(181, 92, 255, .16));
+      font-size: 14px;
+      color: #eaffff;
+    }
+
+    .nav-cta:hover,
+    .btn-primary:hover,
+    .btn-ghost:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 50px rgba(85, 231, 255, .16);
+      border-color: rgba(85, 231, 255, .72);
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 34px;
+      align-items: center;
+      padding: 86px 0 58px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 13px;
+      margin-bottom: 22px;
+      border: 1px solid rgba(85, 231, 255, .24);
+      border-radius: 999px;
+      background: rgba(85, 231, 255, .07);
+      color: #bdf7ff;
+      font-size: 14px;
+      letter-spacing: .4px;
+    }
+
+    .pulse {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 rgba(80, 255, 177, .58);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(80, 255, 177, .6); }
+      70% { box-shadow: 0 0 0 12px rgba(80, 255, 177, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(80, 255, 177, 0); }
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 92px);
+      line-height: .95;
+      letter-spacing: -4px;
+      margin-bottom: 22px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #ffffff, var(--cyan), var(--violet));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy p {
+      max-width: 660px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.75;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      padding: 14px 18px;
+      font-weight: 750;
+    }
+
+    .btn-primary {
+      color: #031018;
+      border: none;
+      background: linear-gradient(135deg, var(--cyan), #fff, var(--green));
+      box-shadow: 0 22px 54px rgba(85, 231, 255, .20);
+    }
+
+    .btn-ghost {
+      color: #dcf8ff;
+      background: rgba(255,255,255,.05);
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      max-width: 620px;
+    }
+
+    .stat {
+      padding: 16px;
+      border: 1px solid rgba(85, 231, 255, .16);
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.045);
+      backdrop-filter: blur(12px);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 590px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orb-wrap {
+      position: absolute;
+      width: min(92vw, 520px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    .orb {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,.9), rgba(85,231,255,.35) 16%, transparent 31%),
+        radial-gradient(circle at 68% 65%, rgba(181,92,255,.55), transparent 33%),
+        radial-gradient(circle at 50% 50%, rgba(85,231,255,.18), rgba(8,14,28,.1) 58%, transparent 70%);
+      border: 1px solid rgba(85, 231, 255, .24);
+      box-shadow:
+        inset 0 0 70px rgba(85, 231, 255, .16),
+        0 0 110px rgba(85, 231, 255, .22),
+        0 0 160px rgba(181, 92, 255, .12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .orb::before,
+    .orb::after {
+      content: "";
+      position: absolute;
+      inset: 12%;
+      border-radius: 50%;
+      border: 1px dashed rgba(255,255,255,.18);
+      animation: rotate 18s linear infinite;
+    }
+
+    .orb::after {
+      inset: 23%;
+      animation-direction: reverse;
+      animation-duration: 12s;
+      border-color: rgba(80,255,177,.18);
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .ring {
+      position: absolute;
+      width: 112%;
+      height: 112%;
+      border-radius: 50%;
+      border: 1px solid rgba(85,231,255,.18);
+      transform: rotateX(70deg) rotateZ(-18deg);
+      box-shadow: 0 0 44px rgba(85,231,255,.14);
+    }
+
+    .node {
+      position: absolute;
+      min-width: 170px;
+      padding: 14px 16px;
+      border: 1px solid rgba(85,231,255,.22);
+      border-radius: 18px;
+      background: rgba(6,12,25,.72);
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow);
+    }
+
+    .node small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .node strong {
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .node-1 { top: 36px; right: 4px; }
+    .node-2 { left: -2px; bottom: 92px; }
+    .node-3 { right: 18px; bottom: 28px; }
+
+    .linkedin-card {
+      width: min(380px, 88vw);
+      padding: 18px;
+      border: 1px solid rgba(85,231,255,.26);
+      border-radius: 26px;
+      background: linear-gradient(135deg, rgba(7, 15, 30, .88), rgba(18, 15, 40, .78));
+      backdrop-filter: blur(20px);
+      box-shadow: 0 34px 90px rgba(0,0,0,.48);
+    }
+
+    .linkedin-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .linkedin-card-header span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .linkedin-card-header strong {
+      color: #dffcff;
+    }
+
+    .badge-shell {
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.08);
+      background: #101725;
+      min-height: 94px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+    }
+
+    .profile-badge-section {
+      padding-top: 24px;
+    }
+
+    .profile-badge-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 30px;
+      border: 1px solid rgba(85,231,255,.16);
+      border-radius: var(--radius-xl);
+      background: linear-gradient(135deg, rgba(11,18,32,.74), rgba(18,15,40,.62));
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .profile-badge-panel::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      right: -120px;
+      top: -130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(85,231,255,.2), transparent 68%);
+    }
+
+    .profile-badge-panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-badge-panel p {
+      max-width: 600px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-top: 14px;
+    }
+
+    .linkedin-card.standalone {
+      position: relative;
+    }
+
+    section {
+      padding: 58px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 22px;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 850;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .section-head p {
+      max-width: 470px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      min-height: 244px;
+      padding: 24px;
+      border: 1px solid rgba(85,231,255,.16);
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255,255,255,.065), rgba(255,255,255,.028));
+      overflow: hidden;
+      box-shadow: 0 18px 48px rgba(0,0,0,.20);
+      transition: transform .28s ease, border-color .28s ease, background .28s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(85,231,255,.46);
+      background: linear-gradient(180deg, rgba(85,231,255,.12), rgba(255,255,255,.035));
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      right: -70px;
+      top: -70px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(85,231,255,.22), transparent 70%);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 16px;
+      background: rgba(85,231,255,.10);
+      border: 1px solid rgba(85,231,255,.22);
+      font-size: 24px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .tech-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 26px;
+      border: 1px solid rgba(85,231,255,.14);
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(20px);
+    }
+
+    .chip {
+      position: relative;
+      padding: 11px 14px;
+      border-radius: 999px;
+      color: #dcfaff;
+      border: 1px solid rgba(85,231,255,.20);
+      background: rgba(255,255,255,.05);
+      font-size: 14px;
+      transition: .25s ease;
+    }
+
+    .chip:hover {
+      transform: translateY(-3px) scale(1.03);
+      background: rgba(85,231,255,.12);
+      border-color: rgba(85,231,255,.54);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 16px;
+    }
+
+    .feature-panel,
+    .contact-panel {
+      border: 1px solid rgba(85,231,255,.16);
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .feature-panel {
+      padding: 28px;
+      min-height: 380px;
+      position: relative;
+    }
+
+    .feature-panel::before {
+      content: "";
+      position: absolute;
+      inset: auto -80px -130px auto;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(181,92,255,.26), transparent 68%);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+      margin-top: 26px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      color: #031018;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--cyan), var(--green));
+    }
+
+    .step h3 {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .step p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .terminal {
+      padding: 20px;
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(85,231,255,.16);
+      background: rgba(0,0,0,.38);
+      min-height: 380px;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .terminal-top {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.2);
+    }
+
+    .terminal-line {
+      color: #b8f7ff;
+      line-height: 1.9;
+      font-size: 14px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: lineIn .5s ease forwards;
+    }
+
+    .terminal-line:nth-child(2) { animation-delay: .15s; }
+    .terminal-line:nth-child(3) { animation-delay: .45s; }
+    .terminal-line:nth-child(4) { animation-delay: .75s; }
+    .terminal-line:nth-child(5) { animation-delay: 1.05s; }
+    .terminal-line:nth-child(6) { animation-delay: 1.35s; }
+    .terminal-line:nth-child(7) { animation-delay: 1.65s; }
+
+    @keyframes lineIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .terminal-line span {
+      color: var(--green);
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 24px;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 14px 0 24px;
+    }
+
+    .holo-card {
+      padding: 20px;
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(135deg, rgba(85,231,255,.14), rgba(181,92,255,.12));
+      min-height: 260px;
+      display: grid;
+      align-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .holo-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.13), transparent);
+      transform: translateX(-100%);
+      animation: shine 4.5s infinite;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-120%); }
+      45%, 100% { transform: translateX(120%); }
+    }
+
+    .holo-card strong {
+      font-size: 22px;
+    }
+
+    .holo-card span {
+      color: #c2efff;
+    }
+
+    footer {
+      padding: 32px 0 46px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 940px) {
+      .hero,
+      .project-grid,
+      .contact-panel,
+      .profile-badge-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 62px;
+      }
+
+      .hero-visual {
+        min-height: 560px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .shell {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .nav {
+        border-radius: 24px;
+        align-items: start;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .brand span {
+        max-width: 140px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      h1 {
+        letter-spacing: -2.4px;
+      }
+
+      .mini-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+      }
+
+      .node {
+        min-width: 140px;
+        padding: 12px;
+      }
+
+      .node-1 { right: -6px; }
+      .node-2 { left: -6px; bottom: 82px; }
+      .node-3 { right: 0; bottom: 12px; }
+
+      .linkedin-card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="shell nav">
+    <a href="#top" class="brand" aria-label="Alen Joses R home">
+      <div class="brand-mark">AJ</div>
+      <span>Alen Joses R</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#expertise">Expertise</a>
+      <a href="#stack">Stack</a>
+      <a href="#systems">Systems</a>
+      <a href="#connect">Connect</a>
+    </nav>
+
+    <a class="nav-cta" href="https://in.linkedin.com/in/alenjoses-aiml-engineer" target="_blank" rel="noreferrer">
+      LinkedIn ↗
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="shell hero">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse"></span> Senior AI Engineer · GenAI · ML Systems</div>
+        <h1>Building the next layer of <span class="gradient-text">intelligent products.</span></h1>
+        <p>
+          I design and engineer AI-first systems that combine machine learning, generative AI, scalable backend architecture, and clean product thinking into production-ready experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#connect">Connect with me</a>
+          <a class="btn-ghost" href="#systems">Explore my work</a>
+        </div>
+
+        <div class="mini-stats" aria-label="Profile highlights">
+          <div class="stat">
+            <strong>4.5+</strong>
+            <span>Years engineering AI/ML products</span>
+          </div>
+          <div class="stat">
+            <strong>M.Tech</strong>
+            <span>Data Science background</span>
+          </div>
+          <div class="stat">
+            <strong>GenAI</strong>
+            <span>LLMs, agents, RAG and automation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="orb-wrap" data-tilt>
+          <div class="ring"></div>
+          <div class="orb"></div>
+        </div>
+
+        <div class="node node-1" data-tilt>
+          <small>Focus</small>
+          <strong>Production AI</strong>
+        </div>
+        <div class="node node-2" data-tilt>
+          <small>Method</small>
+          <strong>Data → Model → Product</strong>
+        </div>
+        <div class="node node-3" data-tilt>
+          <small>Interface</small>
+          <strong>Human-centered GenAI</strong>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="shell" id="expertise">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-kicker">Expertise</div>
+          <h2>Where intelligence meets engineering.</h2>
+        </div>
+        <p>Use these sections as your portfolio pillars. Replace the descriptions with exact achievements, metrics, and project names when you are ready.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="icon">🧠</div>
+          <h3>Generative AI Systems</h3>
+          <p>RAG workflows, LLM integrations, agentic automation, prompt orchestration, evaluation loops, and secure enterprise AI experiences.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">⚙️</div>
+          <h3>ML Engineering</h3>
+          <p>Model development, feature pipelines, experimentation, deployment, monitoring, and reliable lifecycle management for ML-powered products.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">🚀</div>
+          <h3>Product Architecture</h3>
+          <p>Backend services, APIs, cloud-native patterns, scalable integrations, and polished user experiences around intelligent capabilities.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell" id="stack">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-kicker">Tech Stack</div>
+          <h2>Modern tools for AI delivery.</h2>
+        </div>
+        <p>A visual skill cloud that feels alive. Edit the labels to match your strongest tools and frameworks.</p>
+      </div>
+
+      <div class="tech-cloud reveal" id="techCloud">
+        <span class="chip">Python</span>
+        <span class="chip">Machine Learning</span>
+        <span class="chip">Deep Learning</span>
+        <span class="chip">LLMs</span>
+        <span class="chip">RAG</span>
+        <span class="chip">Prompt Engineering</span>
+        <span class="chip">FastAPI</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Cloud</span>
+        <span class="chip">MLOps</span>
+        <span class="chip">Vector Databases</span>
+        <span class="chip">Data Pipelines</span>
+        <span class="chip">APIs</span>
+        <span class="chip">Automation</span>
+        <span class="chip">System Design</span>
+      </div>
+    </section>
+
+    <section class="shell" id="systems">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-kicker">Build Philosophy</div>
+          <h2>From prototype to production signal.</h2>
+        </div>
+        <p>The page uses motion, depth, neon glass, and micro-interactions to present you as a future-focused engineer.</p>
+      </div>
+
+      <div class="project-grid">
+        <div class="feature-panel reveal">
+          <h2>AI products should be reliable, useful, and elegant.</h2>
+          <div class="timeline">
+            <div class="step">
+              <div class="step-number">01</div>
+              <div>
+                <h3>Understand the business problem</h3>
+                <p>Convert vague AI ideas into measurable outcomes, constraints, user journeys, and success metrics.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">02</div>
+              <div>
+                <h3>Engineer the intelligence layer</h3>
+                <p>Design model workflows, retrieval pipelines, APIs, guardrails, telemetry, and feedback loops.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">03</div>
+              <div>
+                <h3>Ship with production discipline</h3>
+                <p>Deploy, observe, evaluate, iterate, and keep the system useful as data and user behavior evolve.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal reveal" aria-label="Animated terminal style profile summary">
+          <div class="terminal-top">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="terminal-line"><span>$</span> init profile --name "Alen Joses R"</div>
+          <div class="terminal-line">role: Senior AI Engineer</div>
+          <div class="terminal-line">domain: AI/ML · Generative AI · Data Science</div>
+          <div class="terminal-line">mode: production-first</div>
+          <div class="terminal-line">signal: scalable, useful, measurable</div>
+          <div class="terminal-line"><span>status:</span> open to meaningful AI conversations</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell profile-badge-section" id="verified-profile">
+      <div class="profile-badge-panel reveal">
+        <div>
+          <div class="section-kicker">Verified Profile</div>
+          <h2>LinkedIn identity, separated cleanly.</h2>
+          <p>
+            Your official LinkedIn badge now has its own focused space instead of sitting inside the hero graphic. This keeps the top section cinematic while making the profile badge easier to notice.
+          </p>
+        </div>
+
+        <div class="linkedin-card standalone" data-tilt>
+          <div class="linkedin-card-header">
+            <strong>Verified profile</strong>
+            <span>LinkedIn badge</span>
+          </div>
+          <div class="badge-shell">
+            <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="alenjoses-aiml-engineer" data-version="v1">
+              <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/alenjoses-aiml-engineer?trk=profile-badge">Alen Joses R</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shell" id="connect">
+      <div class="contact-panel reveal">
+        <div>
+          <div class="section-kicker">Connect</div>
+          <h2>Let’s build what comes next.</h2>
+          <p>
+            Add this section near the end of your website to create a strong conversion point. The LinkedIn link opens your public profile directly.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://in.linkedin.com/in/alenjoses-aiml-engineer" target="_blank" rel="noreferrer">Open LinkedIn</a>
+            <a class="btn-ghost" href="mailto:alenjoses_r@comcast.com">Email me</a>
+          </div>
+        </div>
+
+        <div class="holo-card" data-tilt>
+          <div>
+            <span>Digital identity</span><br />
+            <strong>Alen Joses R</strong>
+          </div>
+          <div>
+            <span>Specialization</span><br />
+            <strong>AI/ML + GenAI Engineering</strong>
+          </div>
+          <div>
+            <span>Profile</span><br />
+            <strong>linkedin.com/in/alenjoses-aiml-engineer</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">
+    © <span id="year"></span> Alen Joses R · Designed with futuristic glass, motion, and AI-inspired visuals.
+  </footer>
+
+  <script>
+    const year = document.getElementById('year');
+    year.textContent = new Date().getFullYear();
+
+    const glow = document.getElementById('cursorGlow');
+    window.addEventListener('pointermove', (event) => {
+      glow.style.left = `${event.clientX}px`;
+      glow.style.top = `${event.clientY}px`;
+      glow.style.opacity = '1';
+    });
+
+    window.addEventListener('pointerleave', () => {
+      glow.style.opacity = '0';
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+
+    document.querySelectorAll('[data-tilt]').forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const rotateY = ((x / rect.width) - 0.5) * 10;
+        const rotateX = ((y / rect.height) - 0.5) * -10;
+        card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+
+      card.addEventListener('pointerleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    const techCloud = document.getElementById('techCloud');
+    const chips = techCloud.querySelectorAll('.chip');
+    chips.forEach((chip, index) => {
+      chip.style.animation = `floatChip ${3.8 + (index % 5) * 0.25}s ease-in-out ${index * 0.06}s infinite`;
+    });
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes floatChip {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
