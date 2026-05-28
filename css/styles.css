@@ -437,7 +437,7 @@ h1 {
 }
 
 .badge-shell {
-  overflow: hidden;
+  overflow: visible;
   border-radius: 18px;
   border: 1px solid rgba(255,255,255,.08);
   background: #101725;
